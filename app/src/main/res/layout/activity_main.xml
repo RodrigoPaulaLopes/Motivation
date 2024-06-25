@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10sp"
+        android:background="@color/purple"
+        android:id="@+id/layout_menu">
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_all_inclusive"
+            app:tint="@color/white" />
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_unit"
+            app:tint="@color/white"/>
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_animation"
+            app:tint="@color/white"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_marginTop="20sp"
+        android:textSize="18sp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_menu"
+        android:gravity="center"
+        android:text="Olá, kotlin"
+       />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:id="@+id/text_motivation"
+        android:layout_height="wrap_content"
+        android:text="Riscos devem ser corridos, porque o maior perigo é não arriscar nada!"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:textSize="22sp" />
+
+    <View
+        android:layout_width="200dp"
+        android:layout_height="4dp"
+        android:layout_centerInParent="true"
+        android:background="@color/purple"
+        android:layout_below="@+id/text_motivation"
+        android:layout_marginTop="32dp"/>
+
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="64dp"
+        android:layout_alignParentBottom="true"
+        android:text="Nova Frase"
+        android:textSize="20sp"
+        android:backgroundTint="@color/purple"
+        android:layout_marginBottom="20dp"/>
+
+
+
+
+</RelativeLayout>
