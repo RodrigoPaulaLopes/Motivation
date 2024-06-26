@@ -35,7 +35,8 @@ class MainActivity : AppCompatActivity(), OnClickListener {
 
     override fun onClick(component: View) {
         if (component.id == R.id.button_new_frase){
-            Toast.makeText(this, "Clicked", Toast.LENGTH_LONG).show()
+            categoryId = Motivation.filter.ALL
+            setFrase()
         }
 
         if (component.id in listOf(R.id.image_all, R.id.image_infinite, R.id.image_sunny)){
