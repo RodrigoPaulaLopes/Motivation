@@ -24,6 +24,8 @@ class UserActivity : AppCompatActivity(), OnClickListener {
 
         binding.buttonSave.setOnClickListener(this)
 
+        verifyUser()
+
     }
 
     override fun onClick(component: View) {
@@ -32,10 +34,19 @@ class UserActivity : AppCompatActivity(), OnClickListener {
         }
     }
 
+
+    fun verifyUser(){
+        val session: Session = Session(this)
+         val name = session.getString("name")
+
+        if (name !== "") {
+            startActivity(Intent(this, MainActivity::class.java))
+            finish()
+        }
+    }
     fun save(){
 
-        val security: SharedPreferences = this.getSharedPreferences("security", MODE_PRIVATE)
-        val name = binding.editTextLetsBegin.text.toString()
+       val name = binding.editTextLetsBegin.text.toString()
 
         if(name == ""){
             Toast.makeText(this, "Precisa digitar seu nome!", Toast.LENGTH_SHORT).show()
