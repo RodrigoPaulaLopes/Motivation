@@ -38,7 +38,9 @@ class MainActivity : AppCompatActivity(), OnClickListener {
             Toast.makeText(this, "Clicked", Toast.LENGTH_LONG).show()
         }
 
-        setImageColors(component.id)
+        if (component.id in listOf(R.id.image_all, R.id.image_infinite, R.id.image_sunny)){
+            setImageColors(component.id)
+        }
     }
 
     fun setImageColors(id: Int){
